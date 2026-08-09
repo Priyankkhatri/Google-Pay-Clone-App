@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PayMate</string>
+    <string name="search_hint">Pay by name or phone number</string>
+
+    <!-- Promotional Banner -->
+    <string name="promo_title">Instant loan with flat ₹1,000 cashback</string>
+    <string name="apply_now">Apply now</string>
+    
+    <!-- Main Payment Actions -->
+    <string name="action_scan_qr">Scan any\nQR code</string>
+    <string name="action_pay_anyone">Pay\nanyone</string>
+    <string name="action_bank_transfer">Bank\ntransfer</string>
+    <string name="action_mobile_recharge">Mobile\nrecharge</string>
+
+    <!-- Shortcut Chips -->
+    <string name="chip_upi_lite">UPI Lite</string>
+    <string name="chip_rewards">Rewards</string>
+    <string name="chip_upi_id">UPI ID</string>
+
+    <!-- Sections -->
+    <string name="section_people">People</string>
+    <string name="section_bills">Bills &amp; recharges</string>
+    <string name="section_businesses">Businesses</string>
+    <string name="section_gift_cards">Gift cards &amp; more</string>
+    <string name="section_offers">Offers &amp; rewards</string>
+    <string name="section_manage_money">Manage your money</string>
+    <string name="action_more">More</string>
+    <string name="people_more">More</string>
+    <string name="manage_link">Manage &gt;</string>
+    <string name="explore_link">Explore &gt;</string>
+
+    <!-- People -->
+    <string name="people_pocket_money">Pocket money</string>
+    <string name="people_sanjay">Sanjay</string>
+    <string name="people_varsha">Varsha Kamlesh</string>
+    <string name="people_jitendra">Jitendra Kumar</string>
+    <string name="people_tamanna">Tamanna Rajendra</string>
+    <string name="people_tapan">Tapan Vipuibhai</string>
+    <string name="people_mahi">Mahi</string>
+
+    <!-- Bills -->
+    <string name="bill_jio">Jio Prepaid</string>
+    <string name="bill_mobile">Mobile recharge</string>
+    <string name="bill_dth">DTH / Cable TV</string>
+    <string name="bill_electricity">Electricity</string>
+    <string name="bill_fastag">FASTag recharge</string>
+    <string name="bill_postpaid">Postpaid mobile</string>
+    <string name="bill_broadband">Broadband / Landline</string>
+    <string name="bill_play">Google Play</string>
+
+    <!-- Businesses -->
+    <string name="biz_mcdonalds">MC Donalds</string>
+    <string name="biz_roshan">Roshan Lal Sen</string>
+    <string name="biz_jayanti">Jayanti So Jiva</string>
+
+    <!-- Cards -->
+    <string name="card_subscriptions_title">Subscriptions</string>
+    <string name="card_subscriptions_desc">Buy plans from leading OTT platforms</string>
+    <string name="card_gift_cards_title">Gift cards</string>
+    <string name="card_gift_cards_desc">Buy gift cards from the biggest brands</string>
+
+    <string name="loan_personal_title">Personal loan</string>
+    <string name="loan_personal_desc">Up to ₹40 lakh, instant approval</string>
+    <string name="check_details">Check details</string>
+
+    <string name="loan_gold_title">Gold loan</string>
+    <string name="loan_gold_desc">Interest rate starting at 9.96% monthly</string>
+
+    <!-- Offers -->
+    <string name="offer_rewards">Rewards</string>
+    <string name="offer_offers">Offers</string>
+    <string name="offer_referrals">Referrals</string>
+
+    <!-- Money Management Rows -->
+    <string name="row_cibil">Check your CIBIL score for free</string>
+    <string name="row_history">See transaction history</string>
+    <string name="row_balance">Check bank balance</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_money">Money</string>
+    <string name="nav_you">You</string>
+</resources>
