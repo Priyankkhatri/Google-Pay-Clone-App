@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background colors -->
+    <color name="bg_dark">#0D0E11</color>
+    <color name="bg_surface">#1A1C21</color>
+    <color name="bg_card">#1A1C21</color>
+    <color name="bg_card_secondary">#1E2025</color>
+    <color name="card_dark">#1A1C21</color>
+    <color name="card_promo">#16171C</color>
+    <color name="bg_search_bar">#1E2027</color>
+    <color name="bg_bottom_nav">#131418</color>
+    <color name="divider_color">#262830</color>
+
+    <!-- Accent colors -->
+    <color name="blue_primary">#0B66E4</color>
+    <color name="blue_secondary">#A8C7FA</color>
+    <color name="blue_selected_pill">#004B76</color>
+    <color name="blue_light_text">#A8C7FA</color>
+    <color name="chip_border">#32353E</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A0A5B1</color>
+    <color name="text_muted">#6E737E</color>
+
+    <!-- Avatar background colors -->
+    <color name="avatar_purple">#673AB7</color>
+    <color name="avatar_cyan">#00BCD4</color>
+    <color name="avatar_brown">#795548</color>
+    <color name="avatar_dark">#282A30</color>
+    <color name="avatar_dark_gray">#3C404B</color>
+
+    <!-- Offer background colors -->
+    <color name="offer_rewards_yellow">#E5A100</color>
+    <color name="offer_pink">#E91E63</color>
+    <color name="offer_blue">#2196F3</color>
+</resources>
