@@ -7,7 +7,6 @@
     android:background="@color/bg_dark"
     tools:context=".MainActivity">
 
-    <!-- MAIN SCROLLABLE DASHBOARD CONTENT -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -23,7 +22,6 @@
             android:paddingHorizontal="16dp"
             android:paddingTop="14dp">
 
-            <!-- 1. TOP SEARCH BAR & PROFILE -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,7 +54,6 @@
                         android:textSize="15sp" />
                 </LinearLayout>
 
-                <!-- Profile Circle Avatar -->
                 <FrameLayout
                     android:id="@+id/btnProfile"
                     android:layout_width="46dp"
@@ -77,7 +74,6 @@
                 </FrameLayout>
             </LinearLayout>
 
-            <!-- 2. LOAN PROMOTIONAL BANNER -->
             <RelativeLayout
                 android:id="@+id/cardPromo"
                 android:layout_width="match_parent"
@@ -137,7 +133,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Custom Vector Artwork Container on Right -->
                 <FrameLayout
                     android:id="@+id/promoGraphicContainer"
                     android:layout_width="120dp"
@@ -153,7 +148,6 @@
                 </FrameLayout>
             </RelativeLayout>
 
-            <!-- 3. MAIN PAYMENT ACTIONS (4 EQUALLY SPACED BUTTONS) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -161,7 +155,6 @@
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <!-- 1. Scan QR -->
                 <LinearLayout
                     android:id="@+id/btnScanQr"
                     android:layout_width="0dp"
@@ -196,7 +189,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 2. Pay anyone -->
                 <LinearLayout
                     android:id="@+id/btnPayAnyone"
                     android:layout_width="0dp"
@@ -231,7 +223,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 3. Bank transfer -->
                 <LinearLayout
                     android:id="@+id/btnBankTransfer"
                     android:layout_width="0dp"
@@ -266,7 +257,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 4. Mobile recharge -->
                 <LinearLayout
                     android:id="@+id/btnMobileRecharge"
                     android:layout_width="0dp"
@@ -302,14 +292,12 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 4. UPI SHORTCUT CHIPS -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
                 android:orientation="horizontal">
 
-                <!-- Chip 1: UPI Lite -->
                 <LinearLayout
                     android:id="@+id/chipUpiLite"
                     android:layout_width="0dp"
@@ -338,7 +326,6 @@
                         android:textSize="12sp" />
                 </LinearLayout>
 
-                <!-- Chip 2: Rewards -->
                 <LinearLayout
                     android:id="@+id/chipRewards"
                     android:layout_width="0dp"
@@ -367,7 +354,6 @@
                         android:textSize="12sp" />
                 </LinearLayout>
 
-                <!-- Chip 3: UPI ID -->
                 <LinearLayout
                     android:id="@+id/chipUpiId"
                     android:layout_width="0dp"
@@ -397,7 +383,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 5. PEOPLE SECTION -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -407,7 +392,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!-- Row 1 of People (4 items) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -415,7 +399,6 @@
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <!-- 1. Pocket money -->
                 <LinearLayout
                     android:id="@+id/personPocketMoney"
                     android:layout_width="0dp"
@@ -448,7 +431,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 2. Sanjay -->
                 <LinearLayout
                     android:id="@+id/personSanjay"
                     android:layout_width="0dp"
@@ -484,7 +466,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 3. Varsha Kamlesh -->
                 <LinearLayout
                     android:id="@+id/personVarsha"
                     android:layout_width="0dp"
@@ -520,7 +501,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 4. Jitendra Kumar -->
                 <LinearLayout
                     android:id="@+id/personJitendra"
                     android:layout_width="0dp"
@@ -557,7 +537,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Row 2 of People (4 items) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -565,7 +544,6 @@
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <!-- 5. Tamanna -->
                 <LinearLayout
                     android:id="@+id/personTamanna"
                     android:layout_width="0dp"
@@ -601,7 +579,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 6. Tapan -->
                 <LinearLayout
                     android:id="@+id/personTapan"
                     android:layout_width="0dp"
@@ -637,7 +614,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 7. Mahi -->
                 <LinearLayout
                     android:id="@+id/personMahi"
                     android:layout_width="0dp"
@@ -671,7 +647,6 @@
                         android:textSize="13sp" />
                 </LinearLayout>
 
-                <!-- 8. More -->
                 <LinearLayout
                     android:id="@+id/personMore"
                     android:layout_width="0dp"
@@ -706,7 +681,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 6. BILLS & RECHARGES SECTION -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -735,7 +709,6 @@
                     android:textSize="14sp" />
             </RelativeLayout>
 
-            <!-- Bills Grid Row 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -880,7 +853,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Bills Grid Row 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1022,7 +994,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 7. BUSINESSES SECTION -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1202,7 +1173,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 8. GIFT CARDS & MORE -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1219,7 +1189,6 @@
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <!-- Card 1: Subscriptions -->
                 <LinearLayout
                     android:id="@+id/cardSubscriptions"
                     android:layout_width="0dp"
@@ -1255,7 +1224,6 @@
                         android:textSize="12sp" />
                 </LinearLayout>
 
-                <!-- Card 2: Gift cards -->
                 <LinearLayout
                     android:id="@+id/cardGiftCards"
                     android:layout_width="0dp"
@@ -1293,7 +1261,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 9. OFFERS & REWARDS -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1406,7 +1373,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 10. MANAGE YOUR MONEY -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1522,7 +1488,6 @@
                 android:layout_marginTop="18dp"
                 android:orientation="vertical">
 
-                <!-- Row 1: CIBIL score -->
                 <RelativeLayout
                     android:id="@+id/rowCibilScore"
                     android:layout_width="match_parent"
@@ -1557,7 +1522,6 @@
                         android:src="@drawable/ic_chevron_right" />
                 </RelativeLayout>
 
-                <!-- Row 2: Transaction history -->
                 <RelativeLayout
                     android:id="@+id/rowTransactionHistory"
                     android:layout_width="match_parent"
@@ -1592,7 +1556,6 @@
                         android:src="@drawable/ic_chevron_right" />
                 </RelativeLayout>
 
-                <!-- Row 3: Check bank balance -->
                 <RelativeLayout
                     android:id="@+id/rowCheckBalance"
                     android:layout_width="match_parent"
@@ -1632,7 +1595,6 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- 11. FIXED BOTTOM NAVIGATION BAR -->
     <LinearLayout
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
