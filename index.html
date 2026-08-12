@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayMate - UPI & Payment Dashboard</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Main Scrollable Content -->
+        <main class="main-content">
+            
+            <!-- Top Search Bar & Profile -->
+            <header class="top-bar">
+                <div class="search-bar" id="searchBar">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" placeholder="Pay by name or phone number" id="searchInput" readonly>
+                </div>
+                <div class="profile-avatar" id="btnProfile">
+                    <span>P</span>
+                </div>
+            </header>
+
+            <!-- Loan Promotional Banner -->
+            <section class="promo-card" id="cardPromo">
+                <div class="promo-info">
+                    <h2>Instant loan with flat ₹1,000 cashback</h2>
+                    <button class="apply-btn">
+                        <span>Apply now</span>
+                        <div class="arrow-circle">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </button>
+                </div>
+                <div class="promo-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+            </section>
+
+            <!-- Main Payment Actions (4 Buttons) -->
+            <section class="action-grid">
+                <div class="action-item" id="btnScanQr">
+                    <div class="icon-squircle blue-squircle">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <span>Scan any<br>QR code</span>
+                </div>
+                <div class="action-item" id="btnPayAnyone">
+                    <div class="icon-squircle blue-squircle">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <span>Pay<br>anyone</span>
+                </div>
+                <div class="action-item" id="btnBankTransfer">
+                    <div class="icon-squircle blue-squircle">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <span>Bank<br>transfer</span>
+                </div>
+                <div class="action-item" id="btnMobileRecharge">
+                    <div class="icon-squircle blue-squircle">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <span>Mobile<br>recharge</span>
+                </div>
+            </section>
+
+            <!-- Shortcut Chips -->
+            <section class="chips-container">
+                <div class="chip" id="chipUpiLite">
+                    <i class="fa-solid fa-bolt chip-icon"></i>
+                    <span>UPI Lite</span>
+                </div>
+                <div class="chip" id="chipRewards">
+                    <i class="fa-solid fa-gift chip-icon"></i>
+                    <span>Rewards</span>
+                </div>
+                <div class="chip" id="chipUpiId">
+                    <i class="fa-solid fa-tag chip-icon"></i>
+                    <span>UPI ID</span>
+                </div>
+            </section>
+
+            <!-- People Section -->
+            <section class="section-container">
+                <h3 class="section-title">People</h3>
+                <div class="people-grid">
+                    <div class="person-item" onclick="openPaymentModal('Pocket Money')">
+                        <div class="avatar-circle dark-avatar">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <span>Pocket money</span>
+                    </div>
+                    <div class="person-item" onclick="openPaymentModal('Sanjay')">
+                        <div class="avatar-circle dark-avatar text-avatar">S</div>
+                        <span>Sanjay</span>
+                    </div>
+                    <div class="person-item" onclick="openPaymentModal('Varsha Kamlesh')">
+                        <div class="avatar-circle dark-avatar text-avatar">V</div>
+                        <span>Varsha Kamlesh</span>
+                    </div>
+                    <div class="person-item" onclick="openPaymentModal('Jitendra Kumar')">
+                        <div class="avatar-circle purple-avatar text-avatar">J</div>
+                        <span>Jitendra Kumar</span>
+                    </div>
+                    <div class="person-item" onclick="openPaymentModal('Tamanna Rajendra')">
+                        <div class="avatar-circle cyan-avatar text-avatar">T</div>
+                        <span>Tamanna Rajendra</span>
+                    </div>
+                    <div class="person-item" onclick="openPaymentModal('Tapan Vipulbhai')">
+                        <div class="avatar-circle brown-avatar text-avatar">T</div>
+                        <span>Tapan Vipulbhai</span>
+                    </div>
+                    <div class="person-item" onclick="openPaymentModal('Mahi')">
+                        <div class="avatar-circle dark-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span>Mahi</span>
+                    </div>
+                    <div class="person-item" id="personMore">
+                        <div class="avatar-circle dark-avatar">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bills & Recharges Section -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h3 class="section-title">Bills & recharges</h3>
+                    <span class="link-text">Manage &gt;</span>
+                </div>
+                <div class="bills-grid">
+                    <div class="bill-item" onclick="showToast('Jio Prepaid selected')">
+                        <div class="circle-icon blue-circle text-avatar">Jio</div>
+                        <span>Jio Prepaid</span>
+                    </div>
+                    <div class="bill-item" onclick="showToast('Mobile Recharge selected')">
+                        <div class="circle-icon blue-circle">
+                            <i class="fa-solid fa-mobile-retro"></i>
+                        </div>
+                        <span>Mobile recharge</span>
+                    </div>
+                    <div class="bill-item" onclick="showToast('DTH / Cable TV selected')">
+                        <div class="circle-icon blue-circle">
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                        <span>DTH / Cable TV</span>
+                    </div>
+                    <div class="bill-item" onclick="showToast('Electricity selected')">
+                        <div class="circle-icon blue-circle">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <span>Electricity</span>
+                    </div>
+                    <div class="bill-item" onclick="showToast('FASTag recharge selected')">
+                        <div class="circle-icon blue-circle">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <span>FASTag recharge</span>
+                    </div>
+                    <div class="bill-item" onclick="showToast('Postpaid mobile selected')">
+                        <div class="circle-icon blue-circle">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <span>Postpaid mobile</span>
+                    </div>
+                    <div class="bill-item" onclick="showToast('Broadband selected')">
+                        <div class="circle-icon blue-circle">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <span>Broadband / Landline</span>
+                    </div>
+                    <div class="bill-item" onclick="showToast('Google Play selected')">
+                        <div class="circle-icon blue-circle">
+                            <i class="fa-brands fa-google-play"></i>
+                        </div>
+                        <span>Google Play</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Businesses Section -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h3 class="section-title">Businesses</h3>
+                    <span class="link-text">Explore &gt;</span>
+                </div>
+                <div class="biz-grid">
+                    <div class="biz-item" onclick="showToast('McDonald\'s selected')">
+                        <div class="avatar-circle purple-avatar text-avatar">M</div>
+                        <span>MC Donalds</span>
+                    </div>
+                    <div class="biz-item" onclick="showToast('Roshan Lal Sen selected')">
+                        <div class="avatar-circle dark-avatar text-avatar">R</div>
+                        <span>Roshan Lal Sen</span>
+                    </div>
+                    <div class="biz-item" onclick="showToast('Jayanti So Jiva selected')">
+                        <div class="avatar-circle blue-circle text-avatar">J</div>
+                        <span>Jayanti So Jiva</span>
+                    </div>
+                    <div class="biz-item" onclick="showToast('More merchants selected')">
+                        <div class="avatar-circle dark-avatar">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscriptions & Gift Cards -->
+            <section class="section-container">
+                <h3 class="section-title">Gift cards & more</h3>
+                <div class="cards-row">
+                    <div class="feature-card" id="cardSubscriptions">
+                        <i class="fa-solid fa-film card-icon"></i>
+                        <h4>Subscriptions</h4>
+                        <p>Buy plans from leading OTT platforms</p>
+                    </div>
+                    <div class="feature-card" id="cardGiftCards">
+                        <i class="fa-solid fa-gift card-icon text-blue"></i>
+                        <h4>Gift cards</h4>
+                        <p>Buy gift cards from the biggest brands</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offers & Rewards -->
+            <section class="section-container">
+                <h3 class="section-title">Offers & rewards</h3>
+                <div class="offers-grid">
+                    <div class="offer-item" onclick="showToast('Rewards selected')">
+                        <div class="avatar-circle dark-avatar">
+                            <i class="fa-solid fa-trophy yellow-text"></i>
+                        </div>
+                        <span>Rewards</span>
+                    </div>
+                    <div class="offer-item" onclick="showToast('Offers selected')">
+                        <div class="avatar-circle dark-avatar">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                        <span>Offers</span>
+                    </div>
+                    <div class="offer-item" onclick="showToast('Referrals selected')">
+                        <div class="avatar-circle blue-circle">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <span>Referrals</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Manage Your Money -->
+            <section class="section-container">
+                <h3 class="section-title">Manage your money</h3>
+                <div class="cards-row">
+                    <div class="feature-card" id="cardPersonalLoan">
+                        <i class="fa-solid fa-money-bill-transfer card-icon"></i>
+                        <h4>Personal loan</h4>
+                        <p>Up to ₹40 lakh, instant approval</p>
+                        <span class="blue-link">Check details</span>
+                    </div>
+                    <div class="feature-card" id="cardGoldLoan">
+                        <i class="fa-solid fa-coins card-icon"></i>
+                        <h4>Gold loan</h4>
+                        <p>Interest rate starting at 9.96% monthly</p>
+                        <span class="blue-link">Apply now</span>
+                    </div>
+                </div>
+
+                <div class="options-list">
+                    <div class="option-row" id="rowCibilScore">
+                        <i class="fa-solid fa-gauge-high row-icon"></i>
+                        <span>Check your CIBIL score for free</span>
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                    </div>
+                    <div class="option-row" id="rowTransactionHistory">
+                        <i class="fa-solid fa-clock-rotate-left row-icon"></i>
+                        <span>See transaction history</span>
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                    </div>
+                    <div class="option-row" id="rowCheckBalance">
+                        <i class="fa-solid fa-building-columns row-icon text-blue"></i>
+                        <span>Check bank balance</span>
+                        <i class="fa-solid fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="bottom-nav">
+            <div class="nav-tab active" id="navHome">
+                <div class="nav-pill">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <span>Home</span>
+            </div>
+            <div class="nav-tab" id="navMoney">
+                <div class="nav-pill">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <span>Money</span>
+            </div>
+            <div class="nav-tab" id="navYou">
+                <div class="nav-pill">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <span>You</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Interactive Payment Modal -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modalRecipient">Pay Contact</h3>
+                <i class="fa-solid fa-xmark close-modal" onclick="closePaymentModal()"></i>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span>₹</span>
+                    <input type="number" id="payAmount" placeholder="0" autofocus>
+                </div>
+                <input type="text" id="payNote" placeholder="Add a note (optional)" class="note-input">
+            </div>
+            <button class="pay-confirm-btn" onclick="confirmPayment()">Pay Now</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
