@@ -8,40 +8,27 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
-/**
- * MainActivity for PayMate payment dashboard app.
- * Rebuilt to match the reference video design for college project presentation.
- */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize click listeners for top search and main actions
         setupTopHeader()
         setupMainActions()
         setupShortcutChips()
-
-        // Initialize click listeners for grid sections
         setupPeopleSection()
         setupBillsSection()
         setupBusinessesSection()
-
-        // Initialize cards, offers & money management
         setupCardsAndOffers()
         setupMoneyManagement()
-
-        // Initialize bottom navigation
         setupBottomNavigation()
     }
 
-    // Helper method to show Toast messages
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    // 1. Top Search Bar and Profile
     private fun setupTopHeader() {
         findViewById<View>(R.id.searchBar)?.setOnClickListener {
             showToast("Search clicked - Pay by name or phone")
@@ -54,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 2. Four Main Payment Actions
     private fun setupMainActions() {
         findViewById<View>(R.id.btnScanQr)?.setOnClickListener {
             showToast("QR Scanner clicked")
@@ -70,7 +56,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 3. Horizontal Shortcut Chips
     private fun setupShortcutChips() {
         findViewById<View>(R.id.chipUpiLite)?.setOnClickListener {
             showToast("UPI Lite clicked")
@@ -83,7 +68,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 4. People Section
     private fun setupPeopleSection() {
         findViewById<View>(R.id.personPocketMoney)?.setOnClickListener {
             showToast("Paying to Pocket money")
@@ -111,7 +95,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 5. Bills & Recharges Section
     private fun setupBillsSection() {
         findViewById<View>(R.id.btnBillsManage)?.setOnClickListener {
             showToast("Manage Bills clicked")
@@ -142,7 +125,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 6. Businesses Section
     private fun setupBusinessesSection() {
         findViewById<View>(R.id.btnBusinessesExplore)?.setOnClickListener {
             showToast("Explore Businesses clicked")
@@ -161,7 +143,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 7. Gift Cards, Subscriptions & Offers
     private fun setupCardsAndOffers() {
         findViewById<View>(R.id.cardSubscriptions)?.setOnClickListener {
             showToast("Subscriptions clicked")
@@ -180,7 +161,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 8. Manage Your Money Section & Clickable Rows
     private fun setupMoneyManagement() {
         findViewById<View>(R.id.cardPersonalLoan)?.setOnClickListener {
             showToast("Personal Loan details clicked")
@@ -199,7 +179,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // 9. Bottom Navigation Bar Handling
     private fun setupBottomNavigation() {
         val navHome = findViewById<View>(R.id.navHome)
         val navMoney = findViewById<View>(R.id.navMoney)
